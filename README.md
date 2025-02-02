@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# QR Code Reader & Generator
 
-## Getting Started
+A simple QR code reader and generator built with Next.js. This web app allows users to generate QR codes, scan QR codes using a camera, and save generated QR codes in local storage for future use.
 
-First, run the development server:
+## Demo
+[Live Demo](https://qr-iota-six.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+- Generate QR codes from text input
+- Scan QR codes using a camera
+- Save generated QR codes to local storage
+- Responsive and user-friendly interface
+
+## Technologies Used
+- **Next.js** - Framework for React applications
+- **react-qr-reader-es6** - QR code scanner
+- **qrcode.react** - QR code generator
+
+## Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Abdelaziz79/qr.git
+   cd qr
+   ```
+
+2. Install dependencies:
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Run the development server:
+   ```sh
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Usage
+
+### Generate QR Code
+1. Enter text in the input field.
+2. Click the "Generate QR Code" button.
+3. The QR code will be displayed.
+4. You can save the generated QR code in local storage.
+
+### Scan QR Code
+1. Click the "Scan QR Code" button.
+2. Allow camera access when prompted.
+3. Point your camera at a QR code.
+4. The scanned result will be displayed.
+
+## Dependencies
+```javascript
+const QrReader = dynamic(() => import("react-qr-reader-es6"), { ssr: false });
+import { QRCodeSVG } from "qrcode.react";
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
+This project is deployed using Vercel. To deploy your own version:
+1. Push your changes to GitHub.
+2. Connect your repository to Vercel.
+3. Deploy with a single click.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## License
+This project is open-source and available under the MIT License.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Author
+[Abdelaziz Elhadry](https://github.com/Abdelaziz79)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
